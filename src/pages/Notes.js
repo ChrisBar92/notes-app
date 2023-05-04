@@ -23,7 +23,7 @@ const Notes = ({ notes }) => {
 	useEffect(handleSearch, [text])
 
 	return (
-		<section>
+		<section className='notes'>
 			<header className="notes__header">
 				{!showSearch && <h2 className="notes__heading">My Notes</h2>}
 				{showSearch && (
@@ -39,17 +39,17 @@ const Notes = ({ notes }) => {
 						placeholder="Keyword..."
 					/>
 				)}
-				<button className="btn" onClick={() => setShowSearch(prevState => !prevState)}>
+				<button className="btn notes__search" onClick={() => setShowSearch(prevState => !prevState)}>
 					{showSearch ? <MdClose /> : <CiSearch />}
 				</button>
 			</header>
 			<div className="notes__container">
-				{filteredNotes.length == 0 && <p className='empty__notes'>Note notes found</p>}
+				{filteredNotes.length === 0 && <p className='notes__empty-notes'>Note notes found</p>}
 				{filteredNotes.map(note => (
 					<NoteItem key={note.id} note={note} />
 				))}
 			</div>
-			<Link to={'/create-note'} className="btn add__btn">
+			<Link to={'/create-note'} className="btn notes__add-btn">
 				<BsPlusLg />
 			</Link>
 		</section>

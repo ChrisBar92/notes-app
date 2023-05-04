@@ -29,7 +29,7 @@ const CreateNote = ({ setNotes }) => {
 				<Link to="/" className="btn">
 					<IoIosArrowBack />
 				</Link>
-				<button className="btn lg primary" onClick={handleSubmit}>
+				<button className="create-note__btn btn" onClick={handleSubmit}>
 					Save
 				</button>
 			</header>

@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Notes from './pages/Notes'
 import CreateNote from './pages/CreateNote'
 import EditNote from './pages/EditNote'
-// import dummyNotes from './dummyNotes'
 import { useEffect, useState } from 'react'
 import './base.scss'
 
@@ -14,7 +13,7 @@ function App() {
 	}, [notes])
 
 	return (
-		<main id="app">
+		<main className='app'>
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Notes notes={notes} />} />
