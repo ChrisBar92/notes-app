@@ -19,14 +19,14 @@ const CreateNote = ({ setNotes }) => {
 			setNotes(prevNotes => [note, ...prevNotes])
 
 			//redirect to home page
-			navigate('/')
+			navigate('/notes-app')
 		}
 	}
 
 	return (
 		<section>
 			<header className="create-note__header">
-				<Link to="/" className="btn">
+				<Link to="/notes-app" className="btn">
 					<IoIosArrowBack />
 				</Link>
 				<button className="create-note__btn btn" onClick={handleSubmit}>

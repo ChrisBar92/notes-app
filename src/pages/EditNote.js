@@ -29,7 +29,7 @@ const EditNote = ({ notes, setNotes }) => {
 		}
 
 		//redirect to home page
-		navigate('/')
+		navigate('/notes-app')
 	}
 
 	const handleDelete = () => {
@@ -37,14 +37,14 @@ const EditNote = ({ notes, setNotes }) => {
 			const newNotes = notes.filter(item => item.id !== id)
 
 			setNotes(newNotes)
-			navigate('/')
+			navigate('/notes-app')
 		}
 	}
 
 	return (
 		<section>
 			<header className="create-note__header">
-				<Link to="/" className="btn">
+				<Link to="/notes-app" className="btn">
 					<IoIosArrowBack />
 				</Link>
 				<button className="create-note__btn btn" onClick={handleForm}>
